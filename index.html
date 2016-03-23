@@ -40,30 +40,49 @@
       padding: 0;
       list-style: none;
     }
-    section {
+    main {
       display: flex;
       align-items: center;
+    }
+    h1 {
+      font-size: 16px;
+      font-weight: normal;
+      color: #666;
     }
     .links {
       text-align: center;
     }
     .logo {
+      margin: 0 0 10px;
+    }
+    .logo + h1 {
       margin: 0 0 40px;
+    }
+    .list-item {
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <section>
+  <main>
+
     <ul class="list links">
       <li class="list-item">
         <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="160" class="logo">
+        <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
       </li>
       <li class="list-item">
         <a href="https://clojurescript.ru/cheatsheet/">Шпаргалка по ClojureScript</a>
       </li>
+      <li class="list-item">
+        <a href="http://cljsrn.org/">ClojureScript + React Native</a>
+      </li>
     </ul>
-  </section>
+
+  </main>
+
+  <footer class="page-footer"></footer>
 
 </body>
 </html>

@@ -4,7 +4,9 @@
 
 ## Разделы сайта
 - [Главная](https://clojurescript.ru/)
+- [Больше о ClojureScript](https://clojurescript.ru/about-clojurescript/)
 - [Шпаргалка по ClojureScript](https://clojurescript.ru/cheatsheet/) (требует перевода)
+- [REPL](https://clojurescript.ru/repl/)
 
 ## Помощь проекту
 Если у вас есть желание помочь проекту — ниже приведен список задач, которые нужно решить.

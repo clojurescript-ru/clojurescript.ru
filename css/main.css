@@ -1,0 +1,270 @@
+html {
+  box-sizing: border-box;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: #242424;
+  background: #fafafa;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+}
+pre span[title]:before,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+}
+::selection {
+  background: #5F7FBF;
+  color: #fff;
+}
+a {
+  color: #242424;
+}
+pre {
+  flex: 1;
+  font-size: 14px;
+  font-family: monospace;
+  background: #eee;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 0;
+}
+kbd {
+  padding: 0 2px;
+  font-size: 14px;
+}
+article ul li {
+  margin: 10px 0;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main {
+  padding: 0 10px;
+}
+h1 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+}
+h2 {
+  font-weight: normal;
+}
+blockquote {
+  font-size: 30px;
+  font-weight: normal;
+  color: #666;
+  position: relative;
+  padding: 0 0 0 30px;
+}
+blockquote:before {
+  top: -30px;
+  left: 0;
+  content: '\201C';
+}
+blockquote:after {
+  right: 10px;
+  content: '\201D';
+  top: -30px;
+}
+blockquote:after,
+blockquote:before {
+  color: #ccc;
+  font-size: 60px;
+  position: absolute;
+}
+pre span[title] {
+  position: relative;
+}
+pre span[title].macro {
+  color: #B51DAA;
+}
+pre span[title].fn {
+  color: #1473C4;
+}
+pre span[title].str {
+  color: #406B25;
+}
+pre span[title]:hover {
+  color: #5F7FBF;
+}
+pre span[title]:hover:before {
+  display: block;
+}
+pre span[title]:before {
+  content: attr(title);
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  left: 50%;
+  top: 0;
+  transform: translate3d(-50%, -110%, 0);
+}
+.row {
+  display: flex;
+}
+.row p {
+  flex: 1;
+  margin: 0 0 0 30px;
+  font-size: 16px;
+}
+.quote {
+  max-width: 630px;
+  margin: 120px auto 0;
+}
+.what {
+  max-width: 600px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+.what ul {
+  margin: 50px 0;
+  padding: 0;
+  list-style: none;
+}
+.what ul li {
+  margin: 20px 0;
+}
+.page-header {
+  padding: 20px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.article,
+.repl {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+.intro {
+  display: flex;
+  text-decoration: none;
+}
+.logo {
+  margin: 0 20px 0 0;
+}
+.logo + h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.list.links {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  padding: 0 40px 0 0;
+}
+.list-item {
+  margin: 0 14px;
+}
+.list-item:first-child {
+  margin: 0 14px 0 0;
+}
+.list-item:last-child {
+  margin: 0 0 0 14px;
+}
+.page-footer {
+  text-align: center;
+  padding: 0 0 10px;
+}
+.page-footer a {
+  text-decoration: none;
+  font-size: 10px;
+  color: #606060;
+}
+
+@media only screen and (max-width: 680px) {
+  .row {
+    flex-direction: column;
+  }
+  .row p {
+    margin: 10px 0 0;
+  }
+}
+
+/* Outer console element */
+.wrapper {
+  max-width: 600px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  padding: 4px;
+  background: #fff;
+  margin: 30px auto 0;
+}
+#console {
+  height: 260px;
+  position: relative;
+  font-size: 14px;
+}
+/* The inner console element. */
+.jqconsole {
+  background-color: #fff;
+}
+.jqconsole-prompt {
+  color: #000;
+}
+.jqconsole-old-prompt {
+  color: #000;
+  font-weight: normal;
+}
+.jqconsole-input {
+  color: #000;
+}
+.jqconsole-old-input {
+  color: #000;
+  font-weight: normal;
+}
+.jqconsole-output {
+  font-weight: lighter;
+  font-family:monospace;
+  color: grey;
+}
+.jqconsole-return {
+  font-weight: normal;
+  font-family:monospace;
+  color: #000;
+}
+.jqconsole-error {
+  font-weight: normal;
+  font-family:monospace;
+  color: #C03515;
+}
+/* The cursor. */
+.jqconsole-cursor {
+  font-weight: normal;
+  font-family:monospace;
+  background-color: #666;
+}
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+  font-weight: normal;
+  font-family:monospace;
+  background-color: #ccc;
+}
+
+.jqconsole-composition {
+  background-color: red;
+}

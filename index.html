@@ -3,89 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>clojurescript.ru</title>
-  <style>
-    html {
-      box-sizing: border-box;
-    }
-    html * {
-      box-sizing: inherit;
-    }
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      color: #000;
-      background: #fafafa;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
-      font-size: 24px;
-      letter-spacing: 0;
-      font-style: normal;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -moz-font-feature-settings: "liga" on;
-      line-height: 1.4;
-      text-rendering: optimizeLegibility;
-    }
-    a {
-      color: #242424;
-    }
-    .list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    main {
-      display: flex;
-      align-items: center;
-    }
-    h1 {
-      font-size: 16px;
-      font-weight: normal;
-      color: #666;
-    }
-    .links {
-      text-align: center;
-    }
-    .logo {
-      margin: 0 0 10px;
-    }
-    .logo + h1 {
-      margin: 0 0 40px;
-    }
-    .list-item {
-      margin: 10px 0;
-    }
-    .page-footer a {
-      text-decoration: none;
-      font-size: 10px;
-      color: #606060;
-    }
-  </style>
+  <title>Главная λ clojurescript.ru</title>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 
-  <main>
+  <header class="page-header">
+
+    <a href="https://clojurescript.ru/" class="intro">
+      <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="60" height="60" class="logo">
+      <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
+    </a>
 
     <ul class="list links">
       <li class="list-item">
-        <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="160" class="logo">
-        <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
+        <a href="/about-clojurescript">Больше о ClojureScript</a>
       </li>
       <li class="list-item">
-        <a href="https://clojurescript.ru/cheatsheet/">Шпаргалка по ClojureScript</a>
+        <a href="/cheatsheet">Шпаргалка</a>
       </li>
       <li class="list-item">
-        <a href="http://cljsrn.org/">ClojureScript + React Native</a>
+        <a href="/repl">REPL</a>
       </li>
     </ul>
+
+  </header>
+
+  <main class="main-content">
+
+    <section class="quote">
+      <blockquote cite="https://www.youtube.com/watch?v=tVooR-dF_Ag">
+        Clojure rocks, and JavaScript reaches.
+      </blockquote>
+    </section>
+
+    <section class="what">
+      <p>Современный Lisp с упором на функциональное программирование.</p>
+      <ul>
+        <li><a href="/about-clojurescript">Узнать больше</a></li>
+        <li><a href="/repl">Попробовать</a></li>
+      </ul>
+    </section>
 
   </main>
 

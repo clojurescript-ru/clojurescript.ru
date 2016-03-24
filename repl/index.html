@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REPL λ clojurescript.ru</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <header class="page-header">
+
+    <a href="https://clojurescript.ru/" class="intro">
+      <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="60" height="60" class="logo">
+      <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
+    </a>
+
+    <ul class="list links">
+      <li class="list-item">
+        <a href="/about-clojurescript">Больше о ClojureScript</a>
+      </li>
+      <li class="list-item">
+        <a href="/cheatsheet">Шпаргалка</a>
+      </li>
+      <li class="list-item">
+        <a href="/repl">REPL</a>
+      </li>
+    </ul>
+
+  </header>
+
+  <main class="main-content repl">
+
+    <h2>Ваша первая программа на ClojureScript</h2>
+    <div class="row">
+<pre><code>(<span class="macro" title="определение функции">defn</span> <span title="имя функции">say-hi</span> <span title="список параметров">[name]</span>
+  (<span class="fn" title="вызов функциии склеивания строки">str</span> <span class="str" title="строка">"Hi "</span> (<span class="fn" title="вызов JavaScript функции 'prompt'">js/prompt</span> <span class="str" title="строка">"What's your name?"</span>) <span class="str" title="строка">"!"</span>))</code>
+
+<code><span class="fn" title="вызов функции 'say-hi'">(say-hi)</span></code></pre>
+    <p><small>Это ClojureScript REPL. Введите в консоль код отображенный рядом и нажмите <kbd>Enter</kbd>, чтобы выполнить его. Наведите курсор на подсвеченные части кода, чтобы увидеть описание.</small></p>
+    </div>
+
+    <div class="wrapper">
+      <div id="console"></div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <a href="https://github.com/clojurescript-ru/clojurescript.ru">github.com/clojurescript-ru/clojurescript.ru</a>
+  </footer>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jqconsole.min.js"></script>
+  <script type="text/javascript" src="/js/jq_readline.js"></script>
+  <script type="text/javascript" src="/js/repl-web.js"></script>
+  <script type="text/javascript" src="/js/repl-main.js"></script>
+
+</body>
+</html>

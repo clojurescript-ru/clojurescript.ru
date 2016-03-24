@@ -5,7 +5,7 @@
 ## Разделы сайта
 - [Главная](https://clojurescript.ru/)
 - [Больше о ClojureScript](https://clojurescript.ru/about-clojurescript/)
-- [Шпаргалка по ClojureScript](https://clojurescript.ru/cheatsheet/) (требует перевода)
+- [Справочник по ClojureScript](https://clojurescript.ru/cheatsheet/) (требует перевода)
 - [REPL](https://clojurescript.ru/repl/)
 - [Ссылки](https://clojurescript.ru/resources/)
 

@@ -38,7 +38,7 @@ a {
 pre {
   flex: 1;
   font-size: 14px;
-  font-family: monospace;
+  font-family: monospace, sans-serif;
   background: #eee;
   border-radius: 2px;
   display: inline-block;
@@ -268,6 +268,17 @@ pre span[title]:before {
     background: #666;
     border-radius: 2px;
   }
+}
+
+.comparison .code {
+  display: flex;
+}
+.comparison pre:first-child {
+  margin: 0 20px 0 0;
+}
+.comparison pre {
+  flex: 1;
+  padding: 10px;
 }
 
 /* Outer console element */

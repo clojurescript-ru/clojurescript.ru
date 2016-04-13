@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сравнение с JavaScript λ clojurescript.ru</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <header class="page-header">
+
+    <a href="https://clojurescript.ru/" class="intro">
+      <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="60" height="60" class="logo">
+      <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
+    </a>
+
+    <ul class="list links">
+      <li class="list-item open">
+        <div>open menu</div>
+      </li>
+      <li class="list-item close">
+        <div>&times;</div>
+      </li>
+      <li class="list-item">
+        <a href="/about-clojurescript">Больше о ClojureScript</a>
+      </li>
+      <li class="list-item">
+        <a href="/cheatsheet">Справочник</a>
+      </li>
+      <li class="list-item">
+        <a href="/repl">REPL</a>
+      </li>
+      <li class="list-item">
+        <a href="/koans">ClojureScript Koans</a>
+      </li>
+      <li class="list-item">
+        <a href="/resources">Ссылки</a>
+      </li>
+    </ul>
+
+  </header>
+
+  <main class="main-content">
+
+    <article class="article">
+
+      <h2>Сравнение с JavaScript</h2>
+
+      <section class="comparison">
+        <h3>Глобальные переменные</h3>
+        <div class="code">
+          <pre>var foo = 'bar';</pre>
+          <pre>(def foo "bar")</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Локальные переменные</h3>
+        <div class="code">
+          <pre>const foo = 'bar';
+...</pre>
+          <pre>(let [foo "bar"]
+  ...)</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Деструктурирование</h3>
+        <div class="code">
+          <pre>const person = {
+  fname: 'John',
+  mname: 'J',
+  lname: 'Doe'
+}
+
+const { fname, lname } = person;
+...
+
+const color = [255, 255, 100, 0.7];
+
+const [r, , b, a] = color;
+...</pre>
+          <pre>(def person {:fname "John"
+             :mname "J"
+             :lname "Doe"})
+
+(let [{:keys [fname lname]} person]
+  ...)
+
+(def color [255 255 100 0.7])
+
+(let [[r _ b a] color]
+  ...)</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Массивы</h3>
+        <div class="code">
+          <pre>const arr = [1, 2, 3];</pre>
+          <pre>(def arr #js [1 2 3])</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Объекты</h3>
+        <div class="code">
+          <pre>const obj = { foo: 'bar' };</pre>
+          <pre>(def obj #js {:foo "bar"})</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Неизменяемые списки, векторы, множества и словари</h3>
+        <div class="code">
+          <pre>// Отсутствуют
+// Реализованы в библиотеках Immutable.js и mori</pre>
+          <pre>(def l '(1 2 3))
+(def v [1 2 3])
+(def s #{1 2 3})
+(def m {:foo "bar"})</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Доступ к значениям в коллекциях</h3>
+        <div class="code">
+          <pre>const obj = { foo: 'bar' };
+obj.foo
+
+const arr = [1, 2, 3];
+arr[1]</pre>
+          <pre>(def obj {:foo "bar"})
+(:foo obj)
+;; ключевые слова — это функции
+
+(def arr [1 2 3])
+(nth arr 1)</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Добавление значений в коллекции</h3>
+        <div class="code">
+          <pre>const obj = { foo: 'bar' };
+obj.foo = 'baz';
+
+const arr = [1, 2, 3];
+arr.push(4);</pre>
+          <pre>(def obj {:foo "bar"})
+(assoc obj :foo "baz")
+;; создает новую коллекцию, не изменяя оригинал
+
+(def arr [1 2 3])
+(conj arr 4)
+;; создает новую коллекцию, не изменяя оригинал</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Проверка равенства</h3>
+        <div class="code">
+          <pre>// Сравнение по ссылке
+const a = [1, 2, 3];
+const b = [1, 2, 3];
+a === b // false</pre>
+          <pre>;; Сравнение по значению
+(def a [1 2 3])
+(def b [1 2 3])
+(= a b) ;; true</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Приведение типов к булевому типу</h3>
+        <div class="code">
+          <pre>// false
+false
+0
+''
+null
+undefined
+NaN
+// все остальное true</pre>
+          <pre>;; false
+nil
+false
+;; все остальное true</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Ветвление</h3>
+        <div class="code">
+          <pre>const arr = [1, 2, 3];
+
+if (arr.length > 0) {
+  ...
+}</pre>
+          <pre>(def arr #js [1 2 3])
+
+(if (pos? (count arr))
+  ...)</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Функции</h3>
+        <div class="code">
+          <pre>function foo() {
+  ...
+}</pre>
+          <pre>(defn foo []
+  ...)</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Возвращение значения из функции</h3>
+        <div class="code">
+          <pre>function foo() {
+  return 'bar';
+}</pre>
+          <pre>(defn foo []
+  "bar")</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Полиморфизм</h3>
+        <div class="code">
+          <pre>function foo() {
+  if (arguments.length === 1) {
+    return 'one';
+  }
+  if (arguments.length === 2) {
+    return 'two';
+  }
+  if (arguments.length === 3) {
+    return 'three';
+  }
+}</pre>
+          <pre>(defn foo
+  ([a] "one")
+  ([a b] "two")
+  ([a b c] "three"))</pre>
+        </div>
+      </section>
+
+      <section class="comparison">
+        <h3>Остаточные параметры</h3>
+        <div class="code">
+          <pre>function foo(a, b, ...args) {
+  ...
+}</pre>
+          <pre>(defn foo [a b &amp; args]
+  ...)</pre>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer class="page-footer">
+    <a href="https://github.com/clojurescript-ru">github.com/clojurescript-ru</a>
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

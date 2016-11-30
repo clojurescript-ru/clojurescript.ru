@@ -138,6 +138,7 @@ pre span[title]:before {
   max-width: 600px;
   margin: 30px auto 0;
   text-align: center;
+  font-size: 16px;
 }
 .what ul {
   margin: 50px 0;

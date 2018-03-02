@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ClojureScript REPL</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
 
   <header class="page-header">
 
     <a href="https://clojurescript.ru/" class="intro">
       <img src="/img/cljs-ring.svg" alt="clojurescript.ru logo" width="60" height="60" class="logo">
-      <h1><em>Русскоязычный ресурс о ClojureScript</em></h1>
+      <h1>
+        <em>Русскоязычный ресурс о ClojureScript</em>
+      </h1>
     </a>
 
     <ul class="list links">
@@ -45,11 +49,15 @@
 
     <h2>Ваша первая программа на ClojureScript</h2>
     <div class="row">
-<pre><code>(<span class="macro" title="определение функции">defn</span> <span title="имя функции">say-hi</span> <span title="список параметров">[name]</span>
+      <pre><code>(<span class="macro" title="определение функции">defn</span> <span title="имя функции">say-hi</span> <span title="список параметров">[name]</span>
   (<span class="fn" title="вызов функциии склеивания строки">str</span> <span class="str" title="строка">"Hi "</span> (<span class="fn" title="вызов JavaScript функции 'prompt'">js/prompt</span> <span class="str" title="строка">"What's your name?"</span>) <span class="str" title="строка">"!"</span>))</code>
 
 <code><span class="fn" title="вызов функции 'say-hi'">(say-hi)</span></code></pre>
-    <p><small>Это ClojureScript REPL. Введите в консоль код отображенный рядом и нажмите <kbd>Enter</kbd>, чтобы выполнить его. Используйте <kbd>Shift + Enter</kbd> для перехода на новую строку. Наведите курсор на подсвеченные части кода, чтобы увидеть описание.</small></p>
+      <p>
+        <small>Это ClojureScript REPL. Введите в консоль код отображенный рядом и нажмите
+          <kbd>Enter</kbd>, чтобы выполнить его. Используйте
+          <kbd>Shift + Enter</kbd> для перехода на новую строку. Наведите курсор на подсвеченные части кода, чтобы увидеть описание.</small>
+      </p>
     </div>
 
     <div class="wrapper">
@@ -57,6 +65,8 @@
     </div>
 
   </main>
+
+  <div class="div"></div>
 
   <footer class="page-footer">
     <a href="https://github.com/clojurescript-ru">github.com/clojurescript-ru</a>
@@ -71,4 +81,5 @@
   <script type="text/javascript" src="/js/repl-main.js"></script>
 
 </body>
+
 </html>
